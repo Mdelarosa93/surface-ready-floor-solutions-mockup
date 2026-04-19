@@ -7,7 +7,7 @@
   --text: #23313d;
   --white: #ffffff;
   --border: rgba(49, 75, 97, 0.12);
-  --shadow: 0 18px 40px rgba(49, 75, 97, 0.12);
+  --shadow: 0 6px 18px rgba(49, 75, 97, 0.05);
 }
 
 * {
@@ -123,16 +123,15 @@ img {
 }
 
 .nav-cta {
-  padding: 0.8rem 1rem;
-  border-radius: 999px;
+  padding: 0.72rem 0.95rem;
+  border-radius: 10px;
   background: var(--dark);
   color: var(--white);
 }
 
 .hero {
-  padding: 5rem 0 3rem;
-  background: radial-gradient(circle at top right, rgba(127, 181, 58, 0.15), transparent 28%),
-    linear-gradient(180deg, rgba(72, 111, 143, 0.08), transparent 70%);
+  padding: 6.5rem 0 4.25rem;
+  background: linear-gradient(180deg, rgba(72, 111, 143, 0.04), transparent 70%);
 }
 
 .hero-grid,
@@ -198,21 +197,29 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  padding: 0.95rem 1.3rem;
+  border-radius: 10px;
+  padding: 0.9rem 1.2rem;
   font-weight: 700;
   border: 1px solid transparent;
   cursor: pointer;
 }
 
 .btn-primary {
-  background: var(--green);
-  color: var(--dark);
+  background: var(--dark);
+  color: var(--white);
 }
 
 .btn-secondary {
   background: transparent;
   border-color: var(--border);
+  color: var(--dark);
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
   color: var(--dark);
 }
 
@@ -242,11 +249,16 @@ h3 {
 .hero-card,
 .card,
 .step,
-.contact-card {
+.contact-card,
+.faq-row {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 10px;
   box-shadow: var(--shadow);
+}
+
+.minimal-card {
+  box-shadow: none;
 }
 
 .hero-panel {
@@ -255,13 +267,15 @@ h3 {
 
 .panel-label {
   display: inline-block;
-  padding: 0.4rem 0.7rem;
-  border-radius: 999px;
-  background: rgba(72, 111, 143, 0.1);
-  color: var(--blue);
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--gray);
   font-weight: 700;
   font-size: 0.78rem;
   margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 .stat-grid,
@@ -282,8 +296,8 @@ h3 {
 
 .stat-grid div {
   padding: 1rem;
-  border-radius: 18px;
-  background: rgba(72, 111, 143, 0.06);
+  border-radius: 10px;
+  background: rgba(72, 111, 143, 0.04);
 }
 
 .stat-grid strong {
@@ -364,21 +378,59 @@ h3 {
 .tag-grid span {
   display: inline-flex;
   padding: 1rem 1.1rem;
-  border-radius: 999px;
+  border-radius: 10px;
   background: var(--white);
   border: 1px solid var(--border);
   font-weight: 700;
   color: var(--dark);
 }
 
+.clean-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.clean-list li {
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  font-weight: 600;
+}
+
+.two-col-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 1.5rem;
+}
+
 .faq-list {
   grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.faq-stack {
+  display: grid;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-row {
+  border-radius: 0;
+  box-shadow: none;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  padding: 1.5rem 0;
+}
+
+.faq-row:last-child {
+  border-bottom: 1px solid var(--border);
 }
 
 .faq-item {
   background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 24px;
+  border-radius: 10px;
   box-shadow: var(--shadow);
 }
 
@@ -479,13 +531,14 @@ h3 {
 
 @media (max-width: 640px) {
   .hero {
-    padding-top: 3.5rem;
+    padding-top: 4rem;
   }
 
   .tag-grid,
   .stat-grid,
   .faq-list,
-  .contact-meta {
+  .contact-meta,
+  .two-col-list {
     grid-template-columns: 1fr;
   }
 
