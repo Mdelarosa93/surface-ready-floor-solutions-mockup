@@ -22,7 +22,7 @@ body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
   color: var(--text);
-  background: var(--cream);
+  background: #ffffff;
   line-height: 1.6;
 }
 
@@ -130,8 +130,8 @@ img {
 }
 
 .hero {
-  padding: 7.5rem 0 5rem;
-  background: linear-gradient(180deg, rgba(72, 111, 143, 0.03), transparent 72%);
+  padding: 8rem 0 5.5rem;
+  background: linear-gradient(180deg, rgba(72, 111, 143, 0.025), transparent 72%);
 }
 
 .hero-grid,
@@ -139,6 +139,10 @@ img {
 .cta-grid {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
+}
+
+.hero-grid {
+  gap: 3.5rem;
 }
 
 .eyebrow,
@@ -240,8 +244,8 @@ h3 {
 .hero-points li,
 .check-list li {
   position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.7rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.65rem;
 }
 
 .hero-points li::before,
@@ -249,8 +253,12 @@ h3 {
   content: '•';
   position: absolute;
   left: 0;
-  color: var(--green);
+  color: var(--gray);
   font-weight: 800;
+}
+
+.minimal-points li {
+  color: rgba(35, 49, 61, 0.76);
 }
 
 .hero-card,
@@ -266,7 +274,13 @@ h3 {
 
 .minimal-card {
   box-shadow: none;
-  border-color: rgba(49, 75, 97, 0.08);
+  border: 0;
+  background: transparent;
+}
+
+.value-panel .hero-panel {
+  border-left: 2px solid rgba(49, 75, 97, 0.14);
+  padding: 0 0 0 1.5rem;
 }
 
 .hero-panel {
@@ -334,11 +348,11 @@ h3 {
 }
 
 .section {
-  padding: 6rem 0;
+  padding: 6.5rem 0;
 }
 
 .alt {
-  background: rgba(255, 255, 255, 0.38);
+  background: rgba(244, 241, 234, 0.28);
 }
 
 .cards.three-up,
@@ -428,6 +442,7 @@ h3 {
   border-left: 0;
   border-right: 0;
   border-top: 0;
+  border-bottom: 1px solid rgba(49, 75, 97, 0.1);
   padding: 1.5rem 0;
 }
 
@@ -443,7 +458,7 @@ h3 {
 }
 
 .cta-band {
-  background: linear-gradient(135deg, var(--blue), var(--dark));
+  background: linear-gradient(135deg, var(--dark), #263847);
   color: var(--white);
 }
 
