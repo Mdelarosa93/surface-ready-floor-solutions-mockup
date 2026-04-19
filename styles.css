@@ -130,7 +130,7 @@ img {
 }
 
 .hero {
-  padding: 6.25rem 0 5rem;
+  padding: 4.75rem 0 5rem;
   background: linear-gradient(180deg, rgba(72, 111, 143, 0.025), transparent 72%);
 }
 
@@ -294,13 +294,69 @@ h3 {
 
 .hero-image {
   width: 100%;
-  min-height: 620px;
+  min-height: 720px;
   height: 100%;
   border-radius: 10px;
-  background-image: linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0.02)), url('https://source.unsplash.com/1400x1200/?modern,kitchen,living-room,open-floor-plan,tile-floor');
-  background-size: cover;
-  background-position: center center;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)),
+    linear-gradient(135deg, #d9e1e7 0%, #eef1f3 45%, #c8d3dc 100%);
   border: 1px solid rgba(49, 75, 97, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(255,255,255,0.18), rgba(255,255,255,0)),
+    repeating-linear-gradient(
+      90deg,
+      rgba(49, 75, 97, 0.04) 0,
+      rgba(49, 75, 97, 0.04) 1px,
+      transparent 1px,
+      transparent 110px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(49, 75, 97, 0.04) 0,
+      rgba(49, 75, 97, 0.04) 1px,
+      transparent 1px,
+      transparent 110px
+    );
+  opacity: 0.9;
+}
+
+.hero-image-caption {
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 1;
+  padding: 1.25rem 1.35rem;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(49, 75, 97, 0.08);
+  border-radius: 8px;
+}
+
+.hero-image-caption span {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray);
+  margin-bottom: 0.45rem;
+}
+
+.hero-image-caption strong {
+  display: block;
+  color: var(--dark);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.35;
 }
 
 .hero-panel {
