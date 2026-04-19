@@ -130,7 +130,7 @@ img {
 }
 
 .hero {
-  padding: 8rem 0 5.5rem;
+  padding: 6.25rem 0 5rem;
   background: linear-gradient(180deg, rgba(72, 111, 143, 0.025), transparent 72%);
 }
 
@@ -143,6 +143,7 @@ img {
 
 .hero-grid {
   gap: 3.5rem;
+  align-items: stretch;
 }
 
 .value-grid {
@@ -288,13 +289,15 @@ h3 {
 .hero-image-wrap {
   display: flex;
   align-items: stretch;
+  align-self: stretch;
 }
 
 .hero-image {
   width: 100%;
-  min-height: 520px;
+  min-height: 620px;
+  height: 100%;
   border-radius: 10px;
-  background-image: linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0.02)), url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80');
+  background-image: linear-gradient(rgba(255,255,255,0.02), rgba(255,255,255,0.02)), url('https://source.unsplash.com/1400x1200/?modern,kitchen,living-room,open-floor-plan,tile-floor');
   background-size: cover;
   background-position: center center;
   border: 1px solid rgba(49, 75, 97, 0.08);
